@@ -1,0 +1,16 @@
+.row div{
+    height: 200px;
+    background: #333;
+}
+
+.navbar
+{
+background:rgb(34,158,154);
+
+}
+.navbar-default .navbar-brand{
+color:rgb(255,255,255);
+}
+
+
+
