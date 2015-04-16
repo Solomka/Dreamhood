@@ -1,6 +1,6 @@
 {
  "kind": "discovery#rpcDescription",
- "etag": "\"u_zXkMELIlX4ktyNbM2XKD4vK8E/W1zZ-lTMw6OM5Ra5cv2LDlposXs\"",
+ "etag": "\"u_zXkMELIlX4ktyNbM2XKD4vK8E/cNYECCNWY9mtaK5dQDgULFHtVhU\"",
  "discoveryVersion": "v1",
  "id": "conference:v1",
  "name": "conference",
@@ -11,8 +11,8 @@
   "x32": "http://www.google.com/images/icons/product/search-32.gif"
  },
  "protocol": "rpc",
- "rootUrl": "https://dream-hood.appspot.com/_ah/api/",
- "rpcUrl": "https://dream-hood.appspot.com/_ah/api/rpc",
+ "rootUrl": "https://githubdreamhood.appspot.com/_ah/api/",
+ "rpcUrl": "https://githubdreamhood.appspot.com/_ah/api/rpc",
  "rpcPath": "/_ah/api/rpc",
  "parameters": {
   "alt": {

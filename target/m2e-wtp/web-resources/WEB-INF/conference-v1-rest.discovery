@@ -1,6 +1,6 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u_zXkMELIlX4ktyNbM2XKD4vK8E/W1zZ-lTMw6OM5Ra5cv2LDlposXs\"",
+ "etag": "\"u_zXkMELIlX4ktyNbM2XKD4vK8E/cNYECCNWY9mtaK5dQDgULFHtVhU\"",
  "discoveryVersion": "v1",
  "id": "conference:v1",
  "name": "conference",
@@ -11,9 +11,9 @@
   "x32": "http://www.google.com/images/icons/product/search-32.gif"
  },
  "protocol": "rest",
- "baseUrl": "https://dream-hood.appspot.com/_ah/api/conference/v1/",
+ "baseUrl": "https://githubdreamhood.appspot.com/_ah/api/conference/v1/",
  "basePath": "/_ah/api/conference/v1/",
- "rootUrl": "https://dream-hood.appspot.com/_ah/api/",
+ "rootUrl": "https://githubdreamhood.appspot.com/_ah/api/",
  "servicePath": "conference/v1/",
  "batchPath": "batch",
  "parameters": {
