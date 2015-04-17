@@ -30,7 +30,7 @@ body {
 
     background: #dec8bb; /* Old browsers */
     /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RlYzhiYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjMxJSIgc3RvcC1jb2xvcj0iI2FjOGU3NCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjY2JSIgc3RvcC1jb2xvcj0iI2JkYTI4NSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4NzZkNTIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background:  url('../img/demo-1-bg.jpg');
     background: -moz-linear-gradient(top,  #dec8bb 0%, #ac8e74 31%, #bda285 66%, #876d52 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dec8bb), color-stop(31%,#ac8e74), color-stop(66%,#bda285), color-stop(100%,#876d52)); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top,  #dec8bb 0%,#ac8e74 31%,#bda285 66%,#876d52 100%); /* Chrome10+,Safari5.1+ */
@@ -536,16 +536,7 @@ body {
     </script>
 </head>
 <body>
-	<!-- 
- // Inspiration taken from Mike | Creative Mints
- // - Dribbble.com page -> http://drbl.in/ghSU
- 
- Tried to keep it clean and documented. It's not absolutely perfect and I haven't tested it in many of the older browsers, 
- but I will try and tweak it when I see an issue or someone mentions it. Always love the work the designers over at Dribbble.com
- put together. I wanted to attempt to mimic their photoshop work and provide some fun widgets for you Bootstrappers.
- 
- ** Brian Moeller
--->
+	
 
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <!-- Docs at http://simpleweatherjs.com -->
@@ -588,17 +579,17 @@ body {
                </div>
                <div class="clearfix"></div>
             </div>
-            <a href="#" class="list-group-item">
+            <a  href="/edit_profile.html " class="list-group-item">
                <i class="fa fa-user fa-lg pull-right"></i>
-               <p class="list-group-item-text">Edit user</p>
+               <p class="list-group-item-text" >Edit user </p>
             </a>
             <a href="#" class="list-group-item">
                <i class="fa fa-bar-chart-o fa-lg pull-right"></i>
-               <p class="list-group-item-text">Web statistics</p>
+               <p class="list-group-item-text">Your statistics</p>
             </a>
-            <a href="#" class="list-group-item">
+            <a href="/edit_profile.html" class="list-group-item">
                <i class="fa fa-wrench fa-lg pull-right"></i>
-               <p class="list-group-item-text">Upload settings</p>
+               <p class="list-group-item-text"  >Upload settings</p>
             </a>
             <a href="#" class="list-group-item">
                <i class="fa fa-calendar fa-lg pull-right"></i>
@@ -670,127 +661,130 @@ body {
 </div>
 	<script type="text/javascript">
 	
-$(document).ready(function() {
-    
-  // Docs at http://simpleweatherjs.com
-  $.simpleWeather({
-    location: 'New York, NY',
-    woeid: '',
-    unit: 'f',
-    success: function(weather) {
-      current = weather.temp+'° <i class="icon-'+weather.code+'"></i>';
-      hiTemp = 'Hi '+weather.high+'°';
-      wind = weather.wind.speed+' '+weather.units.speed;
 
-      $("#weather-widget #current").html(current);
-      $("#weather-widget #hiTemp").html(hiTemp);
-      $("#weather-widget #wind").html(wind);
-    },
-    error: function(error) {
-      $("#weather").html('<p>'+error+'</p>');
-    }
-  });
-  
-  
+	$(document).ready(function() {
+	    
+	  // Docs at http://simpleweatherjs.com
+	  $.simpleWeather({
+	    location: 'New York, NY',
+	    woeid: '',
+	    unit: 'f',
+	    success: function(weather) {
+	      current = weather.temp+'° <i class="icon-'+weather.code+'"></i>';
+	      hiTemp = 'Hi '+weather.high+'°';
+	      wind = weather.wind.speed+' '+weather.units.speed;
 
-  //Docs at http://www.chartjs.org 
-    var pie_data = [
-        {
-            value: 300,
-            color:"#4DAF7C",
-            highlight: "#55BC75",
-            label: "Video"
-        },
-        {
-            value: 50,
-            color: "#EAC85D",
-            highlight: "#f9d463",
-            label: "Audio"
-        },
-        {
-            value: 100,
-            color: "#E25331",
-            highlight: "#f45e3d",
-            label: "Photos"
-        },
-        {
-            value: 35,
-            color: "#F4EDE7",
-            highlight: "#e0dcd9",
-            label: "Remaining"
-        }
-    ]
-    
-    var line_data = {
-    labels: ["10:00am", "10:05am", "10:10am", "10:15am", "10:20am", "10:25am", "10:30am", "10:35am", "10:40am", "10:45am", "10:50am", "10:55am", "11:00am", "11:05am"],
-    datasets: [
-        {
-            label: "My Second dataset",
-            fillColor: "rgba(77, 175, 124,1)",
-            strokeColor: "rgba(255,255,255,1)",
-            pointColor: "rgba(255,255,255,1)",
-            pointStrokeColor: "#fff",
-            pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(151,187,205,1)",
-            data: [0.0, 107.13, 107.00, 106.89, 106.91, 107.12, 107.06, 107.04, 107.10, 107.14, 107.16, 107.20, 107.21, 107.26]
-        }
-    ]
-    };
-    
-    
-    var bar_data = {
-    labels: ["Monday", "Tuesday", "Wednesday", "Thrusday", "May", "June", "July"],
-    datasets: [
-        {
-            fillColor: "rgba(226,83,49,1)",
-            strokeColor: "rgba(226,83,49,1)",
-            highlightFill: "rgba(226,83,49,0.5)",
-            highlightStroke: "rgba(226,83,49,0.5)",
-            data: [65, 59, 80, 81, 56, 55, 40]
-        }
-    ]
-    };
-    
-    
-    // PIE CHART WIDGET
-    var ctx = document.getElementById("myPieChart").getContext("2d");
-    var myDoughnutChart = new Chart(ctx).Doughnut(pie_data,
-            {
-                responsive:true, 
-                tooltipTemplate: "<%if (label){%><%=label%>: <%}%><%= value %> Gb"
-            });
-    
-    
-    // LINE CHART WIDGET
-    var ctx2 = document.getElementById("myLineChart").getContext("2d");
-    var myLineChart = new Chart(ctx2).Line(line_data,
-            {
-                responsive:true,
-                scaleShowGridLines : false,
-                scaleShowLabels: false,
-                showScale: false,
-                pointDot : true,
-                bezierCurveTension : 0.2,
-                pointDotStrokeWidth : 1,
-                pointHitDetectionRadius : 5,
-                datasetStroke : false,
-                tooltipTemplate: "<%= value %><%if (label){%> - <%=label%><%}%>"
-            });
-            
-        // BAR CHART ON LINE WIDGET    
-        var ctx3 = document.getElementById("myBarChart").getContext("2d");
-        var myBarChart = new Chart(ctx3).Bar(bar_data,
-            {
-                responsive:true,
-                scaleShowGridLines : false,
-                scaleShowLabels: false,
-                showScale: false,
-                pointDot : true, 
-                datasetStroke : false,
-                tooltipTemplate: "<%= value %><%if (label){%> - <%=label%><%}%>"
-            });
-    
-});
+	      $("#weather-widget #current").html(current);
+	      $("#weather-widget #hiTemp").html(hiTemp);
+	      $("#weather-widget #wind").html(wind);
+	    },
+	    error: function(error) {
+	      $("#weather").html('<p>'+error+'</p>');
+	    }
+	  });
+	  
+	  
+
+	  //Docs at http://www.chartjs.org 
+	    var pie_data = [
+	        {
+	            value: 300,
+	            color:"#4DAF7C",
+	            highlight: "#55BC75",
+	            label: "Video"
+	        },
+	        {
+	            value: 50,
+	            color: "#EAC85D",
+	            highlight: "#f9d463",
+	            label: "Audio"
+	        },
+	        {
+	            value: 100,
+	            color: "#E25331",
+	            highlight: "#f45e3d",
+	            label: "Photos"
+	        },
+	        {
+	            value: 35,
+	            color: "#F4EDE7",
+	            highlight: "#e0dcd9",
+	            label: "Remaining"
+	        }
+	    ]
+	    
+	    var line_data = {
+	    labels: ["10:00am", "10:05am", "10:10am", "10:15am", "10:20am", "10:25am", "10:30am", "10:35am", "10:40am", "10:45am", "10:50am", "10:55am", "11:00am", "11:05am"],
+	    datasets: [
+	        {
+	            label: "My Second dataset",
+	            fillColor: "rgba(77, 175, 124,1)",
+	            strokeColor: "rgba(255,255,255,1)",
+	            pointColor: "rgba(255,255,255,1)",
+	            pointStrokeColor: "#fff",
+	            pointHighlightFill: "#fff",
+	            pointHighlightStroke: "rgba(151,187,205,1)",
+	            data: [107.18, 107.13, 107.00, 106.89, 106.91, 107.12, 107.06, 107.04, 107.10, 107.14, 107.16, 107.20, 107.21, 107.26]
+	        }
+	    ]
+	    };
+	    
+	    
+	    var bar_data = {
+	    labels: ["Monday", "Tuesday", "Wednesday", "Thrusday", "May", "June", "July"],
+	    datasets: [
+	        {
+	            fillColor: "rgba(226,83,49,1)",
+	            strokeColor: "rgba(226,83,49,1)",
+	            highlightFill: "rgba(226,83,49,0.5)",
+	            highlightStroke: "rgba(226,83,49,0.5)",
+	            data: [65, 59, 80, 81, 56, 55, 40]
+	        }
+	    ]
+	    };
+	    
+	    
+	    // PIE CHART WIDGET
+	    var ctx = document.getElementById("myPieChart").getContext("2d");
+	    var myDoughnutChart = new Chart(ctx).Doughnut(pie_data,
+	            {
+	                responsive:true, 
+	                tooltipTemplate: "<%if (label){%><%=label%>: <%}%><%= value %> Gb"
+	            });
+	    
+	    
+	    // LINE CHART WIDGET
+	    var ctx2 = document.getElementById("myLineChart").getContext("2d");
+	    var myLineChart = new Chart(ctx2).Line(line_data,
+	            {
+	                responsive:true,
+	                scaleShowGridLines : false,
+	                scaleShowLabels: false,
+	                showScale: false,
+	                pointDot : true,
+	                bezierCurveTension : 0.2,
+	                pointDotStrokeWidth : 1,
+	                pointHitDetectionRadius : 5,
+	                datasetStroke : false,
+	                tooltipTemplate: "<%= value %><%if (label){%> - <%=label%><%}%>"
+	            });
+	            
+	        // BAR CHART ON LINE WIDGET    
+	        var ctx3 = document.getElementById("myBarChart").getContext("2d");
+	        var myBarChart = new Chart(ctx3).Bar(bar_data,
+	            {
+	                responsive:true,
+	                scaleShowGridLines : false,
+	                scaleShowLabels: false,
+	                showScale: false,
+	                pointDot : true, 
+	                datasetStroke : false,
+	                tooltipTemplate: "<%= value %><%if (label){%> - <%=label%><%}%>"
+	            });
+	    
+	});
 	</script>
+	<script src="/js/profile.js"></script>
+	
 </body>
 </html>
