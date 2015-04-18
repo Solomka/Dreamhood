@@ -54,18 +54,58 @@ p.ref {
 }
 
 .codrops-header h1 {
+	/*font-family: Satisfy, cursive;*/
+	color:#1a472a;
 	margin: 0;
-	font-size: 4.5em;
+	font-size: 2.5em;
 	line-height: 1;
 	font-weight: 200;
+	background-color:#e4f4e1;
+	/*#fff1d7*/
 }
-
+.codrops-header h1 .roos{
+	margin: 0;
+	font-size: 0.7em;
+	line-height: 1;
+	font-weight: 200;
+	text-align: right;
+	
+}
+/*
 .codrops-header h1 span {
 	display: block;
 	padding: 1em 0 1.5em;
 	font-size: 36%;
 	color: #95a5a6;
-	line-height: 1.4;
+	
+}
+*/
+
+.codrops-header h2  {
+	color:#1a472a;
+	margin: 0;
+	font-size:1.8em;
+	
+	font-weight: 200;
+}
+
+.codrops-header h2 span {
+	display: block;
+	font-size: 2.5em;
+	color: #95a5a6;
+	
+}
+
+.codrops-header h3 {
+	
+	color:#1a472a;
+	margin: 0;
+	font-size: 2.5em;
+	line-height: 1;
+	font-weight: 200;
+	background-color:#e4f4e1;
+	/*#c7f2ba
+	#ffffcf*/
 }
 
 /* To Navigation Style */

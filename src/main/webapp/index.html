@@ -8,28 +8,76 @@
 
 <title>Dreamhood</title>
 
-	<meta property="og:title" content="DreamHood">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="DreamHood web app that lets your dreams come true.">
-    <meta property="og:image" content="../favicon.ico">
-    <meta property="og:site_name" content="An web app powered by Google App Engine">
-    
+<meta property="og:title" content="DreamHood">
+<meta property="og:type" content="website">
+<meta property="og:description"
+	content="DreamHood web app that lets your dreams come true.">
+<meta property="og:image" content="../favicon.ico">
+<meta property="og:site_name"
+	content="An web app powered by Google App Engine">
+
 <link rel="stylesheet" type="text/css" href="css/normalize.css" />
 <link rel="stylesheet" type="text/css" href="css/demo.css" />
 <link rel="stylesheet" type="text/css" href="css/component.css" />
 <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800'
 	rel='stylesheet' type='text/css'>
-	
+
 <!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		
+
+
+<style>
+button, button:before {
+	display: inline-block;
+	font-size: 20px;
+	color: #fff;
+	text-decoration: none;
+	padding: 8px 15px;
+	border-radius: 100px;
+	border: solid rgb(4, 88, 192);
+	border-width: 3px 10px;
+	outline: none;
+	opacity: 1;
+	transition: .6s, opacity 0s 9999999s, visibility 0s 9999999s;
+}
+
+button {
+	position: relative;
+	padding: calc(8px + 3px - 1px) calc(15px + 10px - 1px);
+	border: 1px solid rgba(62, 153, 239, .5);
+	background: linear-gradient(to left, rgb(62, 153, 239) 1%, #fff 3%,
+		rgb(44, 135, 232) 8%, rgba(255, 255, 255, .3) 50%, rgb(44, 135, 232)
+		92%, #fff 97%, rgb(62, 153, 239) 99%) no-repeat;
+}
+
+button:hover {
+	-webkit-transform: scale(1.1, 1.1);
+	transform: scale(1.1, 1.1);
+}
+
+button:hover:before {
+	border-color: #0766d8;
+	background: #fff linear-gradient(#3fadff, #0766d8 60%, #3279dd);
+}
+
+button:focus, button:active {
+	-webkit-transform: scale(2, 2);
+	transform: scale(2, 2);
+	opacity: 0;
+	visibility: hidden;
+	transition: .4s;
+}
+</style>
+
+
+
+
 <script
 	src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
 <script
 	src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.js"></script>
 <script>
-
 	/**
 	 * Initializes the Google API JavaScript client. Bootstrap the angular module after loading the Google libraries
 	 * so that Google JavaScript library ready in the angular modules.
@@ -44,62 +92,100 @@
 </script>
 
 <script src="//apis.google.com/js/client:plusone.js?onload=init"></script>
+
+
+
+
 </head>
 
 <body ng-controller="RootCtrl" ng-init="initSignInButton()">
 
 	<div class="container demo-1">
-	
+
 		<div class="content">
 			<div id="large-header" class="large-header">
 				<canvas id="demo-canvas"></canvas>
 				<h1 class="main-title">
-				<span class="hood">Dreamhood</span>
-				
-				<br>
-														
-					<span class="thin">Note</span></br>
+					<span class="hood">Dreamhood</span> <br> <span class="thin">Note</span></br>
 					</dir>
 					<span class="thin">Your Dreams</span>
-					
+
 					<div class="codrops-demos">
 						<!--!<a class="btn btn-default btn-lg" ng-click="signIn()">Sign in</a>-->
-						
-				<ul class="list-inline intro-social-buttons" style="list-style-type:none">
-                    <li id="signInLink" ng-hide="getSignedInState()" on-click="return false">
-                        <a class="btn btn-default btn-lg"   ng-click="signIn()"  >Sign In </a>
-                    </li>
-                    <li id="signOutLink" ng-show="getSignedInState()" on-click="return false">
-                        <a class="btn btn-default btn-lg" ng-click="signOut()">Log out</a>
-                    </li>
-                </ul>							
+
+						<ul class="list-inline intro-social-buttons"
+							style="list-style-type: none">
+
+							<li id="signInLink" ng-hide="getSignedInState()"
+								on-click="return false"><a class="btn btn-default btn-lg"
+								ng-click="signIn()">Sign In </a></li>
+
+							<li id="signOutLink" ng-show="getSignedInState()"
+								on-click="return false"><a class="btn btn-default btn-lg"
+								ng-click="signOut()">Log out</a></li>
+
+
+							<li id="yourPage" ng-show="getSignedInState()"
+								on-click="return false">
+
+								<button onclick="location.href='/profile.html';">Your
+									page</button>
+
+
+							</li>
+
+
+						</ul>
 					</div>
-					
+
 				</h1>
-				
+
 			</div>
 
 
 			<div class="codrops-header">
-				<h1>
-					Animated Background Headers <span>Examples for creative
-						website header animations using Canvas and JavaScript</span>
-				</h1>
-				<nav class="codrops-demos">
-				
-					<a class="current-demo" href="index.html">Demo 1</a> 
-					<a href="index2.html">Demo 2</a> 
-					<a href="index3.html">Demo 3</a> 
-					<a href="index4.html">Demo 4</a>
-				</nav>
-			</div>
-		</div>
 
+
+
+				<h1>
+
+					The future belongs to those who believe in the beauty and power of
+					their dreams. <br>
+					<div class="roos">E.Roosevelt</div>
+
+				</h1>
+			
+				<h2>
+				<span>About us</span>
+					If you have a lack of inspiration or understanding of
+						your desires -
+						put them into the words on our site and become
+						proud of yourself after their realization afterwards.
+
+				</h2>
+				<br>
+				<br>
+				<h3>
+					May the dreams of your past be the reality of your future.
+				</h3>
+
+
+
+
+			</div>
+
+			<!-- content -->
+		</div>
+<!-- 
 		<p class="ref">
 			Image credits: <a href="http://www.eso.org/public/images/eso1205a/">ESO/VISTA/J.
 				Emerson. Acknowledgment: Cambridge Astronomical Survey Unit</a>
 		</p>
+ -->
+		<!-- container demo1 -->
 	</div>
+
+
 	<!-- /container -->
 	<script src="/js/TweenLite.min.js"></script>
 	<script src="/js/EasePack.min.js"></script>
