@@ -19,7 +19,7 @@ var app = angular.module('dreamApp',
               
                 when('/profile', {
                     templateUrl: '/webapp/profile.html',
-                    controller: ''
+                    controller: 'ProfileDetailCtrl'
                 }).
                  when('/edit_profile', {
                     templateUrl: '/webapp/edit_profile.html',
