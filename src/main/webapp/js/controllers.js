@@ -150,6 +150,106 @@ dreamApp.controllers.controller('MyProfileCtrl', function($scope, $log,
 	};
 });
 
+
+
+/**
+ * @ngdoc controller
+ * @name ProfileDetailCtrl
+ *
+ * @description
+ * A controller used for the profile detail page.
+ */
+/*
+dreamApp.controllers.controller('ProfileDetailCtrl', function ($scope, $log, $routeParams, HTTP_ERRORS) {
+	$scope.profile = {};
+	*/
+
+       /**
+     * Initializes the profile detail page.
+     * Invokes the profile.getProfile method and sets the returned profile in the $scope.
+     *
+     */
+/*
+    $scope.init = function () {
+        $scope.loading = true;
+        gapi.client.dreamhood.getProfile().execute(function(resp) {
+            $scope.$apply(function () {
+                $scope.loading = false;
+                if (resp.error) {
+                    // The request has failed.
+                    var errorMessage = resp.error.message || '';
+                    $scope.messages = 'Failed to get the conference : '  + ' ' + errorMessage;
+                    $scope.alertStatus = 'warning';
+                    $log.error($scope.messages);
+                } else {
+                    // The request has succeeded.
+                    $scope.alertStatus = 'success';
+                    $scope.profile = resp.result;
+                }
+            });
+        });
+
+       
+    };
+
+
+});
+
+*/
+
+/**
+ * @ngdoc controller
+ * @name ProfileDetailCtrl
+ *
+ * @description
+ * A controller used for the profile detail page.
+ */
+
+dreamApp.controllers.controller('ProfileDetailCtrl',function($scope, $log,
+		oauth2Provider, HTTP_ERRORS) {
+	 $scope.profile = {};
+	
+	/**
+	 * Initializes the My profile page.
+	 */
+	$scope.init = function() {
+		var retrieveProfileCallback = function() {
+			$scope.loading = true;
+			gapi.client.dreamhood.getProfile().execute(function(resp) {
+				$scope.$apply(function() {
+					$scope.loading = false;
+					if (resp.error) {
+						// Failed to get a user profile.
+					} else {
+						// Succeeded to get the user profile.
+						  $scope.alertStatus = 'success';
+		                    $scope.profile = resp.result;
+		                    
+						/*$scope.profile.name = resp.result.name;
+						$scope.profile.surname = resp.result.surname;
+						$scope.profile.city = resp.result.city;
+						$scope.profile.country = resp.result.country;
+						$scope.profile.day = resp.result.day;
+						$scope.profile.month = resp.result.month;
+						$scope.profile.year = resp.result.year;
+
+						/*$scope.initialProfile = resp.result;*/
+					}
+				});
+			});
+		};
+		if (!oauth2Provider.signedIn) {
+			var modalInstance = oauth2Provider.showLoginModal();
+			modalInstance.result.then(retrieveProfileCallback);
+		} else {
+			retrieveProfileCallback();
+		}
+	};
+
+});
+
+
+
 /**
  * @ngdoc controller
  * @name RootCtrl
