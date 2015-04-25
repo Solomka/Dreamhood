@@ -250,6 +250,7 @@ dreamApp.controllers.controller('ProfileDetailCtrl',function($scope, $log,
 
 
 
+
 /**
  * @ngdoc controller
  * @name RootCtrl
