@@ -134,140 +134,331 @@ html {
 
 /*— Navigation Widget —*/
 #nav-widget {
-border: 0px;
-margin-bottom: 20px;
-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+	border: 0px;
+	margin-bottom: 20px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 }
 
-#nav-widget .btn-group:not (:first-child ) {
-border-left: 1px solid #F5F0EC;
-}
+#nav-widget
 
+
+
+ 
+
+
+
+.btn-group
+
+
+
+
+
+
+:not
+
+
+
+ 
+
+
+
+(
+:first-child
+
+
+
+ 
+
+
+
+)
+{
+border-left
+
+
+
+
+
+
+:
+
+
+
+ 
+
+
+
+1
+px
+
+
+
+ 
+
+
+
+solid
+
+
+
+ 
+
+
+
+#F5F0EC
+
+
+
+
+
+
+;
+}
 #nav-widget .btn {
-background-color: #fff;
-border: 0px;
-padding: 20px;
-font-weight: 600;
-border-bottom: 3px solid #fff;
-font-size: 18px;
-font-family: Vivaldi, serif "
-
+	background-color: #fff;
+	border: 0px;
+	padding: 20px;
+	font-weight: 600;
+	border-bottom: 3px solid #fff;
+	font-size: 18px;
+	font-family: Vivaldi, serif "
 }
 
 #nav-widget .btn:hover {
-background-color: #F8F3F0;
-color: #64584C;
-border-bottom: 3px solid #55BC75;
+	background-color: #F8F3F0;
+	color: #64584C;
+	border-bottom: 3px solid #55BC75;
 }
 
 #nav-widget i.fa {
-padding-right: 5px;
+	padding-right: 5px;
 }
 
 #nav-widget .badge {
-font-size: .7em;
-background-color: #E7663F;
-margin-left: 4px;
-top: -10px;
+	font-size: .7em;
+	background-color: #E7663F;
+	margin-left: 4px;
+	top: -10px;
 }
 
 #myLineChart {
-background-color:#B1A599;
-padding: 0px 5px;
-margin: 0px;
+	background-color: #B1A599;
+	padding: 0px 5px;
+	margin: 0px;
 }
 
 #line-chart-widget .panel-heading {
-background-color: #B1A599;
-color: #fff;
-padding-bottom: 0px;
-margin-bottom: 0px;
-text-align: center;
+	background-color: #B1A599;
+	color: #fff;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	text-align: center;
 }
 
-
 <!--
-Posts css --> 
-
-* {
-  box-sizing: border-box;
+Posts css -->* {
+	box-sizing: border-box;
 }
 
 body {
-  background-color: #f5f5f5;
-  font-family: calibri;
+	background-color: #f5f5f5;
+	font-family: calibri;
 }
 
 #container {
-  background-color: #fff;
-  width: 600px;
-  height: 750px;
-  margin: 0 auto;
-  border-radius: 0 0 20px 20px;
-  box-shadow: 0 0 8px 0 #555;
+	background-color: #B1A599;
+	width: 600px;
+	height: 850px;
+	margin: 0 auto;
+	border-radius: 0 0 20px 20px;
+	box-shadow: 0 0 8px 0 #555;
 }
 
 #form-container {
-  margin: 0 auto;
-  text-align: center;
-  width: 500px;
-  margin-bottom: 30px;
+	margin: 0 auto;
+	text-align: center;
+	width: 500px;
+	margin-bottom: 30px;
 }
+
 #form-container textarea {
-  width: 500px;
-  height: 60px;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  resize: none;
-  font-family: calibri;
-  font-size: 16px;
+	width: 465px;
+	height: 60px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	resize: none;
+	font-family: calibri;
+	font-size: 16px;
+	text-align: center;
 }
+
 #form-container textarea:focus {
-  outline: none;
+	outline: none;
+	
 }
+
 #form-container input[type=submit] {
-  position: relative;
-  right: 30px;
+	
+	position: relative;
+	right: 30px;
+	
 }
 
 #feed-container {
-  width: 500px;
-  height: 500px;
-  margin: 0 auto;
-  overflow-y: scroll;
-  border-top: 1px dotted #000;
+	width: 500px;
+	height: 500px;
+	margin: 0 auto;
+	overflow-y: scroll;
+	border-top: 1px dotted #000;
 }
+
 #feed-container #feed {
-  padding-left: 28px;
+	padding-left: 28px;
 }
+
 #feed-container #feed .post {
-  list-style: none;
-  width: 400px;
-  margin-bottom: 30px;
-  border-bottom: 1px dotted #555;
+	list-style: none;
+	width: 400px;
+	margin-bottom: 30px;
+	border-bottom: 1px dotted #555;
 }
+
 #feed-container #feed .post .post-content {
-  padding-top: 3px;
-  margin-bottom: 5px;
-  height: 60px;
-  word-wrap: break-word;
+	padding-top: 3px;
+	margin-bottom: 5px;
+	height: 60px;
+	word-wrap: break-word;
 }
+
 #feed-container #feed .post .post-timestamp {
-  text-align: right;
-  font-size: 12px;
-  margin-top: 0px;
+	text-align: right;
+	font-size: 12px;
+	margin-top: 0px;
 }
 
 .hover {
-  position: absolute;
-  z-index: 100;
-  border: 1px solid #aaa;
-  background-color: #fff;
-  padding: 2px;
-  box-shadow: 1px 1px 5px 1px #ddd;
-  word-wrap: break-word;
+	position: absolute;
+	z-index: 100;
+	border: 1px solid #aaa;
+	background-color: #fff;
+	padding: 2px;
+	box-shadow: 1px 1px 5px 1px #ddd;
+	word-wrap: break-word;
 }
 
+<!--
+tabs css -->.tabs {
+	width: 100%;
+	display: inline-block;
+	
+}
+
+/*----- Tab Links -----*/
+/* Clearfix */
+.tab-links:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+
+.tab-links li {
+	margin: 0px 5px;
+	float: left;
+	text-align:center;
+	list-style: none;
+}
+
+.tab-links a {
+	padding: 9px 15px;
+	display: inline-block;
+	border-radius: 3px 3px 0px 0px;
+	background: #7FB5DA;
+	font-size: 16px;
+	font-weight: 600;
+	color: #4c4c4c;
+	transition: all linear 0.15s;
+}
+
+.tab-links a:hover {
+	background: #a7cce5;
+	text-decoration: none;
+}
+
+li.active a, li.active a:hover {
+	background: #fff;
+	color: #4c4c4c;
+}
+
+/*----- Content of Tabs -----*/
+.tab-content {
+	/*padding: 5px;*/
+	padding: 15px;
+	border-radius: 3px;
+	box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
+	background: #fff;
+}
+
+.tab {
+	display: none;
+}
+
+.tab.active {
+	display: block;
+}
+
+<!--button style -->
+/*
+.btn {
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  font-family: Georgia;
+  color: #382b38;
+  font-size: 16px;
+  background: #6fabd4;
+  padding: 8px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #94c3e0;
+  text-decoration: none;
+}
+*/
+
+.btn {
+   border-top: 1px solid #4c96c4;
+   background: #357194;
+   background: -webkit-gradient(linear, left top, left bottom, from(#5099c9), to(#357194));
+   background: -webkit-linear-gradient(top, #5099c9, #357194);
+   background: -moz-linear-gradient(top, #5099c9, #357194);
+   background: -ms-linear-gradient(top, #5099c9, #357194);
+   background: -o-linear-gradient(top, #5099c9, #357194);
+   padding: 7.5px 15px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #1f1c1f;
+   width:400;
+   font-size: 50px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+/*   vertical-align: middle;*/
+	align:right;
+   }
+.btn:hover {
+   border-top-color: #bcc1c4;
+   background: #bcc1c4;
+   color: #292729;
+   }
+.btn:active {
+   border-top-color: #8aabbf;
+   background: #8aabbf;
+   }
 </style>
 
 
@@ -300,7 +491,6 @@ body {
 <script
 	src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.js"></script>
 <script>
-
 	/**
 	 * Initializes the Google API JavaScript client. Bootstrap the angular module after loading the Google libraries
 	 * so that Google JavaScript library ready in the angular modules.
@@ -312,8 +502,8 @@ body {
 			angular.bootstrap(document, [ 'dreamApp' ]);
 		});
 	};
-	</script>
-	<script src="//apis.google.com/js/client:plusone.js?onload=init"></script>
+</script>
+<script src="//apis.google.com/js/client:plusone.js?onload=init"></script>
 
 
 
@@ -370,6 +560,11 @@ body {
 	}
 </script>
 
+<!-- tag script -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
 </head>
 
 <body>
@@ -413,8 +608,7 @@ body {
 				<div id="user-widget" class="list-group">
 
 					<div class="list-group-item heading">
-						<img class="media-object img-circle"
-							src="img/8rLj23-IP-I.jpg">
+						<img class="media-object img-circle" src="img/8rLj23-IP-I.jpg">
 
 						<div class="clearfix"></div>
 
@@ -429,8 +623,8 @@ body {
 					<div class="well well-sm">
 
 
-						<h3>{{profile.name}}  {{profile.surname}}</h3>
-						<h4>{{profile.country}}  {{profile.city}}</h4>
+						<h3>{{profile.name}} {{profile.surname}}</h3>
+						<h4>{{profile.country}} {{profile.city}}</h4>
 
 					</div>
 				</div>
@@ -453,54 +647,75 @@ body {
 			</div>
 
 			<!-- COLUMN TWO -->
-			<div class="col-sm-6 col-md-8" >
+
+			<div class="col-sm-6 col-md-8">
 
 				<div id='container'>
-  <div id='form-container'>
-  
-    <form  id='post-form'>
-    <br>
-      <textarea id="description" ng-model="idea.description" class="form-control input-lg" placeholder="Try me! (Don't worry, your dreams will come true! )"></textarea>
-      
-      
-      
-       <button ng-click="createIdea(ideaForm)" class="btn btn-primary"> Post
-        </button>
-      
-      <!--  
-           <input type='submit' value='Post'>
-         -->  
-           
-    </form>
-  </div>
-  
-  
-  <div id='feed-container'>
-    <ul id='feed'>
-      <li class='post'>
-      <p class='post-content' 
-     ng-repeat="idea in ideas| getIdeaCreated()"> {{idea.description}}
-      </p>
-        <p class='post-content'>
-          Morbi vel felis est, ac rutrum leo. Fusce convallis, purus sed vestibulum ultrices, lorem lacus eleifend dui, vitae sed.
-        </p>
-        <p class='post-timestamp'>
-          Posted on: Thu, 28 Mar 2013 07:43:12 GMT
-        </p>
-      </li>
-      <li class='post'>
-        <p class='post-content'>
-          Curabitur id diam sit amet lectus volutpat consectetur. Nunc sit amet laoreet urna. Nam sed erat urna, ac vehicula amet.
-        </p>
-        <p class='post-timestamp'>
-          Posted on: Thu, 28 Mar 2013 07:31:57 GMT
-        </p>
-      </li>
-    </ul>
-    
-  </div>
-</div>
-				
+
+
+					<div id='form-container'>
+
+							</br>
+							</br>
+						<div class="tabs">
+							<ul class="tab-links">
+								<li class="active"><a href="#tab1">New dream</a></li>
+								<li><a href="#tab2" ng-click="getIdeaCreated()">Your
+										dreams</a></li>
+
+							</ul>
+							</br>
+							</br>
+							<div class="tab-content">
+
+								<div id="tab1" class="tab active">
+
+									<h3>Formulate your dream</h3>
+									<form id='post-form'>
+										
+										<textarea id="description" ng-model="idea.description"
+											class="form-control input-lg"
+											placeholder="Try me! (Don't worry, your dreams will come true! )"></textarea>
+
+										
+										<button style="width:400; align:left" ng-click="createIdea(ideaForm)" class="btn">Confirm
+										</button>
+										
+									</form>
+
+									
+
+								</div>
+
+								<div id="tab2" class="tab">
+									<h3>Dreams list</h3>
+
+									<div id='feed-container'>
+										<ul id='feed'>
+											<li class='post'></li>
+										</ul>
+										<table>
+											<tbody id='feed'>
+												<tr ng-repeat="idea in ideas" class='post'>
+													<td class='post-content'>{{idea.description}}</td>
+												</tr>
+											</tbody>
+										</table>
+
+									</div>
+
+
+								</div>
+
+							</div>
+						</div>
+
+
+					</div>
+
+
+
+				</div>
 			</div>
 		</div>
 
@@ -509,10 +724,37 @@ body {
 	<script type="text/javascript">
 		
 	</script>
+
 	<!--  <script src="js/lib/angular.min.js"></script>
 	<script src="js/lib/angular-sanitize.min.js"></script> -->
-	
+
 	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+	<script type="text/javascript">
+		jQuery(document).ready(
+				function() {
+					jQuery('.tabs .tab-links a').on(
+							'click',
+							function(e) {
+								var currentAttrValue = jQuery(this)
+										.attr('href');
+
+								// Show/Hide Tabs
+								jQuery('.tabs ' + currentAttrValue).show()
+										.siblings().hide();
+
+								// Change/remove current tab to active
+								jQuery(this).parent('li').addClass('active')
+										.siblings().removeClass('active');
+
+								e.preventDefault();
+							});
+				});
+	</script>
+
+
+
+
 
 </body>
 </html>
