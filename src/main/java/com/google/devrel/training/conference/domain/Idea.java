@@ -4,6 +4,8 @@ import static com.google.devrel.training.conference.service.OfyService.ofy;
 
 import com.google.api.server.spi.config.AnnotationBoolean;
 import com.google.api.server.spi.config.ApiResourceProperty;
+import com.google.common.base.Preconditions;
+import com.google.devrel.training.conference.form.IdeaForm;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Cache;
 import com.googlecode.objectify.annotation.Entity;
@@ -18,13 +20,9 @@ public class Idea {
 	@Id
 	private Long id;
 
-	private String topic;
-
 	private String description;
 
-	// private int mark;
-
-	private boolean done = false;
+	// private boolean done = false;
 
 	// private Object photo;
 
@@ -55,37 +53,20 @@ public class Idea {
 	 * organizerUserId; updateWithIdeaForm(ideaForm); }
 	 */
 
-	public Idea(final long id, final String organizerUserId, String topic,
-			String description) {
-		// Preconditions.checkNotNull(ideaForm.getTopic(),
-		// "The name is required");
+	public Idea(final long id, final String organizerUserId,
+			final IdeaForm ideaForm) {
+		 Preconditions.checkNotNull(ideaForm.getDescription(),
+		"The name is required");
 		this.id = id;
 		this.profileKey = Key.create(Profile.class, organizerUserId);
 		this.organizerUserId = organizerUserId;
-		this.topic = topic;
-		this.description = description;
-		// updateWithIdeaForm(ideaForm);
-	}
+		updateWithIdeaForm(ideaForm);
 
-	public String getTopic() {
-		return topic;
 	}
 
 	public String getDescription() {
 		return description;
 	}
-
-	/*
-	 * public Object getPhoto() { return photo; }
-	 */
-
-	public boolean isDone() {
-		return done;
-	}
-
-	/*
-	 * public int getMark() { return mark; }
-	 */
 
 	public long getIdeaId() {
 		return id;
@@ -113,8 +94,8 @@ public class Idea {
 	 *         userId.
 	 */
 	public String getOrganizerDisplayName() {
-		// Profile organizer = ofy().load().key(Key.create(Profile.class,
-		// organizerUserId)).now();
+		 //Profile organizer = ofy().load().key(Key.create(Profile.class,
+		//organizerUserId)).now();
 		Profile organizer = ofy().load().key(getProfileKey()).now();
 		if (organizer == null) {
 			return organizerUserId;
@@ -130,27 +111,21 @@ public class Idea {
 	 * @param ideaForm
 	 *            contains form data sent from the client.
 	 */
-	/*
-	 * public void updateWithIdeaForm(IdeaForm ideaForm) { this.topic =
-	 * ideaForm.getTopic(); this.description = ideaForm.getDescription(); //
-	 * this.mark = ideaForm.getMark(); // this.done = ideaForm.getDone(); //
-	 * this.photo = ideaForm.getPhoto();
-	 * 
-	 * }
-	 */
-	public void update(String topic, String description) {
-		this.topic = topic;
-		this.description = description;
+
+	public void updateWithIdeaForm(IdeaForm ideaForm) {
+
+		this.description = ideaForm.getDescription();
 	}
 
 	@Override
 	public String toString() {
-		StringBuilder stringBuilder = new StringBuilder("Id: " + id + "\n")
-				.append("Idea: ").append(topic).append("\n");
+		StringBuilder stringBuilder = new StringBuilder("Id: " + id + "\n");
+				//.append("Idea: ");
 		if (description != null) {
-			stringBuilder.append("Description: ").append(description)
+			stringBuilder.append("Idea: ").append(description)
 					.append("\n");
 		}
+
 		return stringBuilder.toString();
 	}
 }
