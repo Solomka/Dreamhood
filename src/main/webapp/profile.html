@@ -109,7 +109,7 @@ html {
 }
 
 #user-widget .heading {
-	color: #8F7F70;
+	color: #6EB8D1;
 	background-color: #B1A599;
 	border-left: 3px solid #B1A599;
 }
@@ -132,81 +132,147 @@ html {
 	color: #fff;
 }
 
-/*-- Navigation Widget --*/
+/*— Navigation Widget —*/
 #nav-widget {
-	border: 0px;
-	margin-bottom: 20px;
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+border: 0px;
+margin-bottom: 20px;
+box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 }
 
-#nav-widget
- 
-.btn-group
-:not
- 
-(
-:first-child
- 
-)
-{
-border-left
-:
- 
-1
-px
- 
-solid
- 
-#F5F0EC
-;
-
-
+#nav-widget .btn-group:not (:first-child ) {
+border-left: 1px solid #F5F0EC;
 }
+
 #nav-widget .btn {
-	background-color: #fff;
-	border: 0px;
-	padding: 20px;
-	font-weight: 600;
-	border-bottom: 3px solid #fff;
-	font-size: 18px;
-	font-family: Vivaldi, serif "
+background-color: #fff;
+border: 0px;
+padding: 20px;
+font-weight: 600;
+border-bottom: 3px solid #fff;
+font-size: 18px;
+font-family: Vivaldi, serif "
+
 }
 
 #nav-widget .btn:hover {
-	background-color: #F8F3F0;
-	color: #64584C;
-	border-bottom: 3px solid #55BC75;
+background-color: #F8F3F0;
+color: #64584C;
+border-bottom: 3px solid #55BC75;
 }
 
 #nav-widget i.fa {
-	padding-right: 5px;
+padding-right: 5px;
 }
 
 #nav-widget .badge {
-	font-size: .7em;
-	background-color: #E7663F;
-	margin-left: 4px;
-	top: -10px;
+font-size: .7em;
+background-color: #E7663F;
+margin-left: 4px;
+top: -10px;
 }
 
 #myLineChart {
-	background-color: #4a95b2;
-	padding: 0px 5px;
-	margin: 0px;
+background-color:#B1A599;
+padding: 0px 5px;
+margin: 0px;
 }
 
 #line-chart-widget .panel-heading {
-	background-color: #4a95b2;
-	color: #fff;
-	padding-bottom: 0px;
-	margin-bottom: 0px;
-	text-align: center;
+background-color: #B1A599;
+color: #fff;
+padding-bottom: 0px;
+margin-bottom: 0px;
+text-align: center;
 }
+
+
+<!--
+Posts css --> 
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  font-family: calibri;
+}
+
+#container {
+  background-color: #fff;
+  width: 600px;
+  height: 750px;
+  margin: 0 auto;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 0 8px 0 #555;
+}
+
+#form-container {
+  margin: 0 auto;
+  text-align: center;
+  width: 500px;
+  margin-bottom: 30px;
+}
+#form-container textarea {
+  width: 500px;
+  height: 60px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  resize: none;
+  font-family: calibri;
+  font-size: 16px;
+}
+#form-container textarea:focus {
+  outline: none;
+}
+#form-container input[type=submit] {
+  position: relative;
+  right: 30px;
+}
+
+#feed-container {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  overflow-y: scroll;
+  border-top: 1px dotted #000;
+}
+#feed-container #feed {
+  padding-left: 28px;
+}
+#feed-container #feed .post {
+  list-style: none;
+  width: 400px;
+  margin-bottom: 30px;
+  border-bottom: 1px dotted #555;
+}
+#feed-container #feed .post .post-content {
+  padding-top: 3px;
+  margin-bottom: 5px;
+  height: 60px;
+  word-wrap: break-word;
+}
+#feed-container #feed .post .post-timestamp {
+  text-align: right;
+  font-size: 12px;
+  margin-top: 0px;
+}
+
+.hover {
+  position: absolute;
+  z-index: 100;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  padding: 2px;
+  box-shadow: 1px 1px 5px 1px #ddd;
+  word-wrap: break-word;
+}
+
 </style>
 
 
 
- 
+
 <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 <script
 	src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -246,25 +312,26 @@ solid
 			angular.bootstrap(document, [ 'dreamApp' ]);
 		});
 	};
+	</script>
 	<script src="//apis.google.com/js/client:plusone.js?onload=init"></script>
 
 
 
-	<script src="/js/TweenLite.min.js"></script>
-		<script src="/js/EasePack.min.js"></script>
-		<script src="/js/rAF.js"></script>
-		<script src="/js/controllers.js"></script>
-		<script src="/js/demo-1.js"></script>
-		<script src="/js/profile.js"></script>
+<script src="/js/TweenLite.min.js"></script>
+<script src="/js/EasePack.min.js"></script>
+<script src="/js/rAF.js"></script>
+<script src="/js/post.js"></script>
+<script src="/js/demo-1.js"></script>
 
-		<script
-			src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.js"></script>
-		<script
-			src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script
-			src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-		<script src="/js/app.js"></script>
-		<script src="/js/controllers.js"></script>
+
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.js"></script>
+<script
+	src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script
+	src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/controllers.js"></script>
 
 
 <script src="//www.chartjs.org/assets/Chart.min.js"></script>
@@ -278,15 +345,15 @@ solid
               'packages':['corechart']
             }]
           }"></script>
-          
-       
+
+
 <script type="text/javascript">
 	google.setOnLoadCallback(drawChart);
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-				[ 'Number', 'Grade' ], [ '1', 5 ], [ '2', 4 ], [ '3', 5 ],
-				[ '4', 3 ] ]);
+				[ 'Number', 'Grade' ], [ '1', 1 ], [ '2', 4 ], [ '3', 2 ],
+				[ '4', 5 ] ]);
 
 		var options = {
 			curveType : 'function',
@@ -308,11 +375,12 @@ solid
 <body>
 
 
-	<div class="container" ng-controller="ProfileDetailCtrl" ng-init="init()">
-	
-	
-	
-	
+	<div class="container" ng-controller="ProfileDetailCtrl"
+		ng-init="init()">
+
+
+
+
 		<div class="row">
 			<div class="col-sm-12">
 
@@ -338,52 +406,35 @@ solid
 		</div>
 
 
-		<div class="row" >
+		<div class="row">
 			<!-- COLUMN ONE -->
 			<div class="col-sm-6 col-md-4">
-			
-			
+
 				<div id="user-widget" class="list-group">
-				
+
 					<div class="list-group-item heading">
 						<img class="media-object img-circle"
-							src="https://s3.amazonaws.com/uifaces/faces/twitter/ademilter/128.jpg">
-						
+							src="img/8rLj23-IP-I.jpg">
+
 						<div class="clearfix"></div>
-						
+
 					</div>
-					
+
 					<a href="/edit_profile.html " class="list-group-item"> <i
 						class="fa fa-user fa-lg pull-right"></i>
 						<p class="list-group-item-text">Edit user</p>
-						
-					</a> 
-					
+
+					</a>
+
 					<div class="well well-sm">
-					
-					<!-- 
-					<h3>{{profile.name}}</h3>
-					<h3>{{profile.surname}}</h3>
-					<h4>{{profile.country}}</h4>
-					<h4>{{profile.city}}</h4>
-				
-					
-					 <p><output name="profile.name">{{profile.name}}</output></p>
-					 <p><output name="profile.surname">{{profile.surname}}</output></p>
-					 <p><output name="profile.country">{{profile.country}}</output></p>
-					 <p><output name="profile.city">{{profile.city}}</output></p>	-->
-					
-					<output id="surname" type="text" name="profile.surname" 
-							ng-bind-html="profile.surname" class="form-control output-lg"
-							 ></output>
+
+
+						<h3>{{profile.name}}  {{profile.surname}}</h3>
+						<h4>{{profile.country}}  {{profile.city}}</h4>
+
 					</div>
-					
-					
 				</div>
-				
-				
-				
-				
+
 				<!--
             ****** LINE CHART WIDGET *******
             -->
@@ -397,20 +448,71 @@ solid
 					<div class="panel-body">
 						<div id="myLineChart"></div>
 
-
 					</div>
 				</div>
+			</div>
+
+			<!-- COLUMN TWO -->
+			<div class="col-sm-6 col-md-8" >
+
+				<div id='container'>
+  <div id='form-container'>
+  
+    <form  id='post-form'>
+    <br>
+      <textarea id="description" ng-model="idea.description" class="form-control input-lg" placeholder="Try me! (Don't worry, your dreams will come true! )"></textarea>
+      
+      
+      
+       <button ng-click="createIdea(ideaForm)" class="btn btn-primary"> Post
+        </button>
+      
+      <!--  
+           <input type='submit' value='Post'>
+         -->  
+           
+    </form>
+  </div>
+  
+  
+  <div id='feed-container'>
+    <ul id='feed'>
+      <li class='post'>
+      <p class='post-content' 
+     ng-repeat="idea in ideas| getIdeaCreated()"> {{idea.description}}
+      </p>
+        <p class='post-content'>
+          Morbi vel felis est, ac rutrum leo. Fusce convallis, purus sed vestibulum ultrices, lorem lacus eleifend dui, vitae sed.
+        </p>
+        <p class='post-timestamp'>
+          Posted on: Thu, 28 Mar 2013 07:43:12 GMT
+        </p>
+      </li>
+      <li class='post'>
+        <p class='post-content'>
+          Curabitur id diam sit amet lectus volutpat consectetur. Nunc sit amet laoreet urna. Nam sed erat urna, ac vehicula amet.
+        </p>
+        <p class='post-timestamp'>
+          Posted on: Thu, 28 Mar 2013 07:31:57 GMT
+        </p>
+      </li>
+    </ul>
+    
+  </div>
+</div>
+				
 			</div>
 		</div>
 
 	</div>
-	
+
 	<script type="text/javascript">
 		
 	</script>
-<script src="js/lib/angular.min.js"></script>
-<script src="js/lib/angular-sanitize.min.js"></script>
-
+	<!--  <script src="js/lib/angular.min.js"></script>
+	<script src="js/lib/angular-sanitize.min.js"></script> -->
 	
+	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
 </body>
 </html>

@@ -105,7 +105,6 @@ dreamApp.controllers.controller('MyProfileCtrl', function($scope, $log,
 	 * 
 	 */
 	$scope.saveProfile = function() {
-		alert("I am here");
 		$scope.submitted = true;
 		$scope.loading = true;
 		gapi.client.dreamhood.saveProfile($scope.profile).execute(
@@ -127,7 +126,6 @@ dreamApp.controllers.controller('MyProfileCtrl', function($scope, $log,
 								return;
 							}
 						} else {
-							alert("I am here");
 							// The request has succeeded.
 							$scope.messages = 'The profile has been updated';
 							$scope.alertStatus = 'success';
@@ -159,44 +157,6 @@ dreamApp.controllers.controller('MyProfileCtrl', function($scope, $log,
  * @description
  * A controller used for the profile detail page.
  */
-/*
-dreamApp.controllers.controller('ProfileDetailCtrl', function ($scope, $log, $routeParams, HTTP_ERRORS) {
-	$scope.profile = {};
-	*/
-
-       /**
-     * Initializes the profile detail page.
-     * Invokes the profile.getProfile method and sets the returned profile in the $scope.
-     *
-     */
-/*
-    $scope.init = function () {
-        $scope.loading = true;
-        gapi.client.dreamhood.getProfile().execute(function(resp) {
-            $scope.$apply(function () {
-                $scope.loading = false;
-                if (resp.error) {
-                    // The request has failed.
-                    var errorMessage = resp.error.message || '';
-                    $scope.messages = 'Failed to get the conference : '  + ' ' + errorMessage;
-                    $scope.alertStatus = 'warning';
-                    $log.error($scope.messages);
-                } else {
-                    // The request has succeeded.
-                    $scope.alertStatus = 'success';
-                    $scope.profile = resp.result;
-                }
-            });
-        });
-
-       
-    };
-
-
-});
-
-*/
-
 /**
  * @ngdoc controller
  * @name ProfileDetailCtrl
@@ -208,7 +168,7 @@ dreamApp.controllers.controller('ProfileDetailCtrl', function ($scope, $log, $ro
 dreamApp.controllers.controller('ProfileDetailCtrl',function($scope, $log,
 		oauth2Provider, HTTP_ERRORS) {
 	 $scope.profile = {};
-	
+
 	/**
 	 * Initializes the My profile page.
 	 */
@@ -220,20 +180,17 @@ dreamApp.controllers.controller('ProfileDetailCtrl',function($scope, $log,
 					$scope.loading = false;
 					if (resp.error) {
 						// Failed to get a user profile.
+						 if (resp.code && resp.code == HTTP_ERRORS.UNAUTHORIZED) {
+					         oauth2Provider.showLoginModal();
+					         return;
+					     }
 					} else {
 						// Succeeded to get the user profile.
 						  $scope.alertStatus = 'success';
 		                    $scope.profile = resp.result;
+		                    console.log($scope.profile);
 		                    
-						/*$scope.profile.name = resp.result.name;
-						$scope.profile.surname = resp.result.surname;
-						$scope.profile.city = resp.result.city;
-						$scope.profile.country = resp.result.country;
-						$scope.profile.day = resp.result.day;
-						$scope.profile.month = resp.result.month;
-						$scope.profile.year = resp.result.year;
-
-						/*$scope.initialProfile = resp.result;*/
+					
 					}
 				});
 			});
@@ -245,10 +202,94 @@ dreamApp.controllers.controller('ProfileDetailCtrl',function($scope, $log,
 			retrieveProfileCallback();
 		}
 	};
+	
+	//create idea
+	
+	  
+    /**
+     * The conference object being edited in the page.
+     * @type {{}|*}
+     */
+    $scope.idea = $scope.idea || {};
+
+    $scope.ideas = [];
+    /**
+     * Invokes the idea.createIdea API.
+     *
+     * @param ideaForm the form object.
+     */
+    $scope.createIdea = function (ideaForm) {
+        
+        $scope.loading = true;
+        gapi.client.dreamhood.createIdea($scope.idea).
+            execute(function (resp) {
+                $scope.$apply(function () {
+                    $scope.loading = false;
+                    if (resp.error) {
+                        // The request has failed.
+                        var errorMessage = resp.error.message || '';
+                        $scope.messages = 'Failed to create a idea : ' + errorMessage;
+                        $scope.alertStatus = 'warning';
+                        $log.error($scope.messages + ' Idea : ' + JSON.stringify($scope.idea));
+
+                        if (resp.code && resp.code == HTTP_ERRORS.UNAUTHORIZED) {
+                            oauth2Provider.showLoginModal();
+                            return;
+                        }
+                    } else {
+                        // The request has succeeded.
+                        $scope.messages = 'The idea has been created : ' + resp.result.description;
+                        $scope.alertStatus = 'success';
+                        $scope.submitted = false;
+                        $scope.idea = {};
+                        $log.info($scope.messages + ' : ' + JSON.stringify(resp.result));
+                    }
+                });
+            });
+    };
+    
+    //show idea
+    
+
+       /**
+       * Invokes the dreamhood.getIdeasCreated method.
+       */
+      $scope.getIdeaCreated = function () {
+      	//завантаження методу
+          $scope.loading = true;
+          gapi.client.dreamhood.getIdeasCreated().
+              execute(function (resp) {
+                  $scope.$apply(function () {
+                      $scope.loading = false;
+                      if (resp.error) {
+                          // The request has failed.
+                          var errorMessage = resp.error.message || '';
+                          $scope.messages = 'Failed to query the ideas created : ' + errorMessage;
+                          $scope.alertStatus = 'warning';
+                          $log.error($scope.messages);
+
+                          if (resp.code && resp.code == HTTP_ERRORS.UNAUTHORIZED) {
+                              oauth2Provider.showLoginModal();
+                              return;
+                          }
+                      } else {
+                          // The request has succeeded.
+                          $scope.submitted = false;
+                          $scope.messages = 'Query succeeded : Ideas you have created';
+                          $scope.alertStatus = 'success';
+                          $log.info($scope.messages);
+
+                          $scope.ideas = [];
+                          angular.forEach(resp.items, function (idea) {
+                              $scope.ideas.push(idea);
+                          });
+                      }
+                      $scope.submitted = true;
+                  });
+              });
+      };
 
 });
-
-
 
 /**
  * @ngdoc controller
