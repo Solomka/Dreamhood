@@ -109,7 +109,7 @@ html {
 }
 
 #user-widget .heading {
-	color: #8F7F70;
+	color: #6EB8D1;
 	background-color: #B1A599;
 	border-left: 3px solid #B1A599;
 }
@@ -132,226 +132,142 @@ html {
 	color: #fff;
 }
 
-/*-- Navigation Widget --*/
+/*— Navigation Widget —*/
 #nav-widget {
-	border: 0px;
-	margin-bottom: 20px;
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+border: 0px;
+margin-bottom: 20px;
+box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 }
 
-#nav-widget
-
- 
-
-.btn-group
-
-
-:not
-
- 
-
-(
-:first-child
-
- 
-
-)
-{
-border-left
-
-
-:
-
- 
-
-1
-px
-
- 
-
-solid
-
- 
-
-#F5F0EC
-
-
-;
+#nav-widget .btn-group:not (:first-child ) {
+border-left: 1px solid #F5F0EC;
 }
+
 #nav-widget .btn {
-	background-color: #fff;
-	border: 0px;
-	padding: 20px;
-	font-weight: 600;
-	border-bottom: 3px solid #fff;
-	font-size: 18px;
-	font-family: Vivaldi, serif "
+background-color: #fff;
+border: 0px;
+padding: 20px;
+font-weight: 600;
+border-bottom: 3px solid #fff;
+font-size: 18px;
+font-family: Vivaldi, serif "
+
 }
 
 #nav-widget .btn:hover {
-	background-color: #F8F3F0;
-	color: #64584C;
-	border-bottom: 3px solid #55BC75;
+background-color: #F8F3F0;
+color: #64584C;
+border-bottom: 3px solid #55BC75;
 }
 
 #nav-widget i.fa {
-	padding-right: 5px;
+padding-right: 5px;
 }
 
 #nav-widget .badge {
-	font-size: .7em;
-	background-color: #E7663F;
-	margin-left: 4px;
-	top: -10px;
+font-size: .7em;
+background-color: #E7663F;
+margin-left: 4px;
+top: -10px;
 }
 
 #myLineChart {
-	background-color: #4a95b2;
-	padding: 0px 5px;
-	margin: 0px;
+background-color:#B1A599;
+padding: 0px 5px;
+margin: 0px;
 }
 
 #line-chart-widget .panel-heading {
-	background-color: #4a95b2;
-	color: #fff;
-	padding-bottom: 0px;
-	margin-bottom: 0px;
-	text-align: center;
+background-color: #B1A599;
+color: #fff;
+padding-bottom: 0px;
+margin-bottom: 0px;
+text-align: center;
 }
 
-<!-- Posts css -->
 
-@blue: #79B9D2;
-@accent: darken(@blue,20);
+<!--
+Posts css --> 
 
 * {
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
-html {
-  font-size:18px;
+body {
+  background-color: #f5f5f5;
+  font-family: calibri;
 }
 
-.topbar {
-  background:@blue;
-  color:white;
-  width:100%;
-  z-index:9999;
-  padding:5px 20px;
-  
-  h1 {
-    cursor:pointer;
-  }
-  
-  nav {
-    margin-top:25px;
-    
-    ul {
-      padding:0;
-      margin:0;
-      
-      li {
-        display:inline-block;
-        padding:10px;
-        
-        a {
-          color:white;
-          text-decoration:none;
-        }
-      }
-    }
-  }
+#container {
+  background-color: #fff;
+  width: 600px;
+  height: 750px;
+  margin: 0 auto;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 0 8px 0 #555;
 }
 
-
-  
-  ul.post-grid {
-    margin:0;
-    padding:0;
-    list-style-type:none;
-    
-    li {
-      padding:20px;
-      cursor:pointer;
-      transition: background linear 0.5s;
-      border-bottom:1px solid @accent;
-      
-      &:hover {
-      background:@accent;
-      color:white;
-      
-        h3 {
-          color: white;
-        }
-       
-      }
-    }
-  }
-
-
-.content {
-  width:100%;
-  position:relative;
-  padding:20px 40px 20px;
+#form-container {
+  margin: 0 auto;
+  text-align: center;
+  width: 500px;
+  margin-bottom: 30px;
+}
+#form-container textarea {
+  width: 500px;
+  height: 60px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  resize: none;
+  font-family: calibri;
+  font-size: 16px;
+}
+#form-container textarea:focus {
+  outline: none;
+}
+#form-container input[type=submit] {
+  position: relative;
+  right: 30px;
 }
 
- h2, h3 {
-    color: @accent;
-  }
-
-.post {
-  -webkit-transition:0.5s linear all;
-  transition:0.5s linear all;
-  opacity:1;
-  padding-bottom:30px;
-  
-  cite {
-    display:inline-block;
-    padding:10px 0;
-  }
+#feed-container {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  overflow-y: scroll;
+  border-top: 1px dotted #000;
+}
+#feed-container #feed {
+  padding-left: 28px;
+}
+#feed-container #feed .post {
+  list-style: none;
+  width: 400px;
+  margin-bottom: 30px;
+  border-bottom: 1px dotted #555;
+}
+#feed-container #feed .post .post-content {
+  padding-top: 3px;
+  margin-bottom: 5px;
+  height: 60px;
+  word-wrap: break-word;
+}
+#feed-container #feed .post .post-timestamp {
+  text-align: right;
+  font-size: 12px;
+  margin-top: 0px;
 }
 
-.comments {
-  ul {
-    margin:0;
-    padding:0;
-    li {
-      list-style-type:none;
-      padding:20px 5px;
-      border-bottom:1px @blue solid;
-    }
-  }
+.hover {
+  position: absolute;
+  z-index: 100;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  padding: 2px;
+  box-shadow: 1px 1px 5px 1px #ddd;
+  word-wrap: break-word;
 }
 
-.post.ng-hide {
-  opacity:0;
-}
-
-.post.ng-hide-add, .post.ng-hide-remove {
-  display:block!important;
-}
-
-form {
-  width:100%;
-}
-input, textarea {
-  display:block;
-  width:100%;
-  padding:10px;
-  font-size:1.1em;
-}
-
-.ng-invalid.ng-dirty {
-  border-color:red;
-}
-
-.ng-valid.ng-dirty {
-  border-color:green;
-}
-
-img {
-  max-width:100%;
-}
 </style>
 
 
@@ -396,6 +312,7 @@ img {
 			angular.bootstrap(document, [ 'dreamApp' ]);
 		});
 	};
+	</script>
 	<script src="//apis.google.com/js/client:plusone.js?onload=init"></script>
 
 
@@ -403,9 +320,9 @@ img {
 <script src="/js/TweenLite.min.js"></script>
 <script src="/js/EasePack.min.js"></script>
 <script src="/js/rAF.js"></script>
-
+<script src="/js/post.js"></script>
 <script src="/js/demo-1.js"></script>
-<script src="/js/blogApp.js"></script>
+
 
 <script
 	src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.js"></script>
@@ -435,8 +352,8 @@ img {
 
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-				[ 'Number', 'Grade' ], [ '1', 5 ], [ '2', 4 ], [ '3', 5 ],
-				[ '4', 3 ] ]);
+				[ 'Number', 'Grade' ], [ '1', 1 ], [ '2', 4 ], [ '3', 2 ],
+				[ '4', 5 ] ]);
 
 		var options = {
 			curveType : 'function',
@@ -497,7 +414,7 @@ img {
 
 					<div class="list-group-item heading">
 						<img class="media-object img-circle"
-							src="https://s3.amazonaws.com/uifaces/faces/twitter/ademilter/128.jpg">
+							src="img/8rLj23-IP-I.jpg">
 
 						<div class="clearfix"></div>
 
@@ -511,20 +428,10 @@ img {
 
 					<div class="well well-sm">
 
-						
-					<h3>{{profile.name}}</h3>
-					<h3>{{profile.surname}}</h3>
-					<h4>{{profile.country}}</h4>
-					<h4>{{profile.city}}</h4>
-				
-					
-					<!-- <p><output name="profile.name">{{profile.name}}</output></p>
-					 <p><output name="profile.surname">{{profile.surname}}</output></p>
-					 <p><output name="profile.country">{{profile.country}}</output></p>
-					 <p><output name="profile.city">{{profile.city}}</output></p>	
 
-						<output id="surname" type="text" name="profile.surname"
-							ng-bind-html="profile.surname" class="form-control output-lg"></output>-->
+						<h3>{{profile.name}}  {{profile.surname}}</h3>
+						<h4>{{profile.country}}  {{profile.city}}</h4>
+
 					</div>
 				</div>
 
@@ -544,129 +451,68 @@ img {
 					</div>
 				</div>
 			</div>
-			
+
 			<!-- COLUMN TWO -->
-			<div class="col-sm-6 col-md-8" ng-app="blogApp">
-			
-			
-  <div ng-controller="BlogController as blog">
-      <div class="topbar">
-        <div class="container">
-          <div class="row">
-            <div >
-            
-              <nav role='navigation' class="push-right">
-                <ul>
-                  <li><a href="#" ng-click="blog.selectTab('blog')">See All Posts</a></li> 
-                  <li><a href="#" ng-click="blog.selectTab('new')">Add New Post</a></li>
-                </ul>
-              </nav> 
-              
-            </div>
-          </div>
-        </div>
-        
-                 
-      </div>
-     
+			<div class="col-sm-6 col-md-8" >
+
+				<div id='container'>
+  <div id='form-container'>
+  
+    <form  id='post-form'>
+    <br>
+      <textarea id="description" ng-model="idea.description" class="form-control input-lg" placeholder="Try me! (Don't worry, your dreams will come true! )"></textarea>
       
-      <div class="content">
-        <div class="container">
-          <div class="row">
-            <ul class="post-grid" ng-show="blog.isSelected('blog')">
-          <li ng-repeat="post in blog.posts" ng-class="{ 'reset-s' : $index%3==0 }" ng-click="blog.selectTab($index)" >
-            <h3>{{post.title}}</h3>
-            <p>{{post.body[0] | limitTo:70}}...</p>
-            <p class="fa fa-comment push-left"> {{post.comments.length}}
-            </p>
-            <p class="fa fa-heart push-right"> {{post.likes}}
-            </p>
-          </li>
-        </ul>
-        <div class="post" ng-repeat="post in blog.posts" ng-show="blog.isSelected($index)">
-          <div>
-            
-            <h2>{{post.title}}</h2>
-            <img src="{{post.image}}" ng-show="{{post.image}}"/>
-            <cite>by {{post.author}} on {{post.createdOn | date}}</cite>
-            <div class="post-body">
-             <p ng-repeat="paragraph in post.body">
-               {{paragraph}}
-             </p> 
-            </div>
-            
-            <div class="comments" ng-controller="CommentController as commentCtrl">
-              <button class="fa fa-heart" ng-click="post.likes = post.likes+1"> {{post.likes}}</button>
-              <h3>Comments</h3>
-              <ul>
-               <li ng-repeat="comment in post.comments">
-                 "{{comment.body}}"
-                 <cite>- <b>{{comment.author}}</b></cite>
-               </li>
-              </ul>
-              <form name="commentForm" ng-submit="commentForm.$valid && commentCtrl.addComment(post)" novalidate>
-              
-                
-                <h4>Add Comment</h4>
-                  <textarea ng-model="commentCtrl.comment.body" cols="30" rows="10" required></textarea>
-                <label for="">by:</label>
-                  <input type="text" ng-model="commentCtrl.comment.author" required placeholder="Name"/>
-                  
-                  <input type="submit" value="Submit" />
-                </form>
-            </div>
-        </div>
-      </div>
-        <div class="post" ng-show="blog.isSelected('new')">
-          <h2>Add New Post</h2>
-          
-          <form name="postForm" ng-submit=" blog.addPost()" novalidate>
-                  <h4>Title</h4>
-                  <input type="text" ng-model="blog.post.title"/>
-                  <h4>Body</h4>
-                  <textarea ng-model="blog.post.body" ng-list="/\n/" rows="10"></textarea>
-                  <!-- 
-                  <label for="">Featured Image URL</label>
-                  <input type="text" ng-model="blog.post.image" placeholder="http://placekitten.com/g/2000/600" />
-                 
-                  <label for="">by:</label>
-                  <input type="text" ng-model="blog.post.author" placeholder="Author Name" required/>
-                   -->
-                  <input type="submit" value="Submit" />
-                </select></form>
-          
-            </div>
-            
-          </div>
-        </div>
-        
-    </div>
+      
+      
+       <button ng-click="createIdea(ideaForm)" class="btn btn-primary"> Post
+        </button>
+      
+      <!--  
+           <input type='submit' value='Post'>
+         -->  
+           
+    </form>
   </div>
   
   
-
-			
-			
-			
-			
+  <div id='feed-container'>
+    <ul id='feed'>
+      <li class='post'>
+      <p class='post-content' 
+     ng-repeat="idea in ideas| getIdeaCreated()"> {{idea.description}}
+      </p>
+        <p class='post-content'>
+          Morbi vel felis est, ac rutrum leo. Fusce convallis, purus sed vestibulum ultrices, lorem lacus eleifend dui, vitae sed.
+        </p>
+        <p class='post-timestamp'>
+          Posted on: Thu, 28 Mar 2013 07:43:12 GMT
+        </p>
+      </li>
+      <li class='post'>
+        <p class='post-content'>
+          Curabitur id diam sit amet lectus volutpat consectetur. Nunc sit amet laoreet urna. Nam sed erat urna, ac vehicula amet.
+        </p>
+        <p class='post-timestamp'>
+          Posted on: Thu, 28 Mar 2013 07:31:57 GMT
+        </p>
+      </li>
+    </ul>
+    
+  </div>
+</div>
+				
 			</div>
-					</div>
-
-
-		
-
-
-
-
+		</div>
 
 	</div>
 
 	<script type="text/javascript">
 		
 	</script>
-	<script src="js/lib/angular.min.js"></script>
-	<script src="js/lib/angular-sanitize.min.js"></script>
-
+	<!--  <script src="js/lib/angular.min.js"></script>
+	<script src="js/lib/angular-sanitize.min.js"></script> -->
+	
+	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 
 </body>
 </html>
